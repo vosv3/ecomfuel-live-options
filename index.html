@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ECF Live 2027 · Coverage proposal</title>
+<meta name="description" content="Vagabonding Media and Evan Fawell's proposal to film ECF Live 2027 in Playa del Carmen and post it to X during the event.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+        color-scheme: light;
+        --green: #315035;
+        --green-deep: #1b3923;
+        --green-ink: #23392a;
+        --lime: #9cc700;
+        --lime-hover: #a9d80f;
+        --lime-dark: #7ea300;
+        --cream: #f9f3ef;
+        --cream-2: #f1e8e1;
+        --sand: #fcedb1;
+        --white: #ffffff;
+        --ink: #141a15;
+        --ink-soft: #4a5a4d;
+        --rule: rgba(49, 80, 53, .16);
+        --rule-on-green: rgba(249, 243, 239, .16);
+        --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+        --wide: 1080px;
+        --text: 720px;
+    }
+    html { scroll-behavior: smooth; background: var(--cream); }
+    body {
+        font-family: var(--font);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.55;
+        background: var(--cream);
+        color: var(--ink);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+    strong, b { font-weight: 600; }
+
+    /* Type */
+    .eyebrow {
+        font-size: .82rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        color: var(--lime-dark);
+        margin-bottom: 1rem;
+    }
+    .band .eyebrow { color: var(--lime); }
+    h1, h2, h3 {
+        font-weight: 700;
+        font-stretch: 125%;
+        line-height: 1.08;
+        letter-spacing: -.01em;
+        text-wrap: balance;
+    }
+    h1 { font-size: clamp(2.3rem, 5vw, 3.9rem); }
+    h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); margin-bottom: 1.1rem; color: var(--green); }
+    .band h2 { color: var(--cream); }
+    h3 { font-size: 1.1rem; line-height: 1.25; margin-bottom: .5rem; color: var(--green); }
+    .band h3 { color: var(--cream); }
+    .lede { max-width: var(--text); color: var(--ink-soft); font-size: 1.05rem; }
+    .band .lede { color: rgba(249, 243, 239, .78); }
+
+    /* Layout */
+    .wrap { max-width: var(--wide); margin: 0 auto; padding-inline: 16px; }
+    section { padding-block: 72px; }
+    .band { background: var(--green); color: var(--cream); }
+    .band.deep { background: var(--green-deep); }
+    .alt { background: var(--cream-2); }
+
+    /* Nav */
+    nav {
+        position: sticky; top: 0; z-index: 100;
+        background: var(--green);
+        color: var(--cream);
+        height: 64px;
+        border-bottom: 1px solid var(--rule-on-green);
+    }
+    nav .wrap {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 1rem;
+    }
+    .nav-links { display: flex; gap: 1.4rem; list-style: none; font-size: .8rem; }
+    .nav-links a { text-decoration: none; opacity: .85; }
+    .nav-links a:hover { opacity: 1; color: var(--lime); }
+    .wordmark { display: block; height: 22px; width: 128px; }
+    .nav-cta { justify-self: end; }
+    .btn {
+        display: inline-flex; align-items: center; gap: .5rem;
+        font-family: var(--font);
+        font-weight: 600;
+        font-size: .9rem;
+        text-decoration: none;
+        padding: 15px 26px;
+        background: var(--lime);
+        color: var(--green-ink);
+        border: 1.5px solid var(--lime);
+        transition: transform .15s, background .15s;
+        cursor: pointer;
+    }
+    .btn:hover { background: var(--lime-hover); border-color: var(--lime-hover); transform: translateY(-1px); }
+    .btn.ghost { background: transparent; color: var(--lime); padding: 9px 16px; font-size: .8rem; }
+    .btn.ghost:hover { background: transparent; color: var(--lime-hover); }
+    .btn.big { padding: 18px 34px; font-size: 1rem; }
+
+    /* Hero */
+    .hero { padding-block: 72px 0; }
+    .hero-grid { max-width: 860px; }
+    .hero h1 { color: var(--cream); margin-bottom: 1.4rem; }
+    .hero h1 em { font-style: normal; color: var(--lime); }
+    .hero .lede { margin-bottom: 2rem; }
+    .hero-note { font-size: .82rem; color: rgba(249, 243, 239, .6); margin-top: .9rem; }
+    .stats {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid var(--rule-on-green);
+    }
+    .stats div { padding: 1.6rem 1.25rem 1.8rem 0; border-right: 1px solid var(--rule-on-green); }
+    .stats div + div { padding-left: 1.25rem; }
+    .stats div:last-child { border-right: none; }
+    .stats b {
+        display: block;
+        font-weight: 700; font-stretch: 125%;
+        font-size: 2rem; line-height: 1.1;
+        color: var(--lime);
+        margin-bottom: .35rem;
+    }
+    .stats span { font-size: .82rem; color: rgba(249, 243, 239, .78); }
+
+    /* Feature grid (lime top rules, no boxes) */
+    .grid-3, .grid-2, .grid-4 { display: grid; gap: 40px 32px; margin-top: 40px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .feat { border-top: 2px solid var(--lime); padding-top: 1.1rem; }
+    .feat p { color: var(--ink-soft); font-size: .96rem; }
+    .band .feat p { color: rgba(249, 243, 239, .75); }
+    .feat .tag {
+        font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+        color: var(--lime-dark); margin-bottom: .5rem; display: block;
+    }
+    .band .feat .tag { color: var(--lime); }
+
+    /* Brief quote */
+    .quote {
+        margin-top: 40px;
+        background: var(--white);
+        border-left: 3px solid var(--lime);
+        padding: 1.6rem 1.8rem;
+        max-width: var(--text);
+    }
+    .quote p { font-size: 1.15rem; color: var(--green); font-weight: 400; }
+    .quote cite { display: block; margin-top: .8rem; font-style: normal; font-size: .82rem; color: var(--ink-soft); }
+
+    /* Crew */
+    .crew { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+    .person { border-top: 1px solid var(--rule); padding-top: 1.2rem; }
+    .person .mono {
+        width: 56px; height: 56px; border-radius: 50%;
+        background: var(--green); color: var(--sand);
+        display: grid; place-items: center;
+        font-weight: 700; font-stretch: 125%; font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .person.optional .mono { background: transparent; color: var(--green); border: 1.5px dashed var(--green); }
+    .person .role { font-size: .82rem; color: var(--lime-dark); font-weight: 600; letter-spacing: .04em; margin-bottom: .6rem; }
+    .person p { font-size: .95rem; color: var(--ink-soft); }
+
+    /* Work viewer */
+    .viewer { margin-top: 40px; background: var(--green-deep); }
+    .tabs { display: flex; overflow-x: auto; border-bottom: 1px solid var(--rule-on-green); }
+    .tab {
+        font-family: var(--font); font-size: .8rem; font-weight: 500;
+        color: rgba(249, 243, 239, .7);
+        background: transparent;
+        border: none; border-right: 1px solid var(--rule-on-green);
+        border-bottom: 2px solid transparent;
+        padding: .9rem 1.2rem;
+        white-space: nowrap; cursor: pointer;
+    }
+    .tab:hover { color: var(--cream); }
+    .tab.active { color: var(--lime); border-bottom-color: var(--lime); background: rgba(156, 199, 0, .06); }
+    .slide[hidden] { display: none !important; }
+    .player {
+        position: relative; width: 100%; aspect-ratio: 16 / 9;
+        background: #0f2015; overflow: hidden;
+    }
+    .player.portrait { aspect-ratio: auto; height: min(720px, 150vw); display: flex; justify-content: center; }
+    .player.portrait iframe { position: relative; width: min(420px, 100%); height: 100%; }
+    .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
+    .player.landscape iframe { background: #000; }
+    .player video { display: block; background: #000; }
+    .player.portrait video { height: 100%; width: auto; max-width: 100%; }
+    .player.landscape video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+    .player-loading {
+        position: absolute; inset: 0; display: grid; place-items: center;
+        font-weight: 800; font-stretch: 125%; text-transform: uppercase;
+        font-size: clamp(1.6rem, 6vw, 4rem); color: rgba(249, 243, 239, .07);
+        text-align: center; line-height: 1.05; padding: 1rem;
+    }
+    .slide-info {
+        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end;
+        gap: 1rem 2rem; padding: 1.5rem 1.6rem 1.7rem;
+        color: var(--cream);
+    }
+    .slide-info .text { flex: 1 1 320px; min-width: 0; }
+    .slide-tag {
+        display: inline-block; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+        color: var(--lime); border: 1px solid var(--lime); padding: .2rem .55rem; margin-bottom: .7rem;
+    }
+    .slide-info h3 { color: var(--cream); font-size: 1.35rem; }
+    .slide-info p { font-size: .9rem; color: rgba(249, 243, 239, .72); max-width: 58ch; }
+
+    /* Notes list */
+    .notes { margin-top: 48px; border-top: 1px solid var(--rule); max-width: 860px; }
+    .notes li {
+        list-style: none;
+        display: grid; grid-template-columns: 180px 1fr; gap: 1rem;
+        padding: 1.1rem 0; border-bottom: 1px solid var(--rule);
+        font-size: .96rem; color: var(--ink-soft);
+    }
+    .notes li b { color: var(--green); font-weight: 600; }
+
+    /* Timeline */
+    .timeline { margin-top: 40px; border-top: 1px solid var(--rule-on-green); }
+    .t-row {
+        display: grid; grid-template-columns: 120px 220px 1fr; gap: 1.5rem;
+        padding: 1.3rem 0; border-bottom: 1px solid var(--rule-on-green);
+        align-items: baseline;
+    }
+    .t-code { font-weight: 700; font-stretch: 125%; color: var(--lime); font-size: 1.05rem; }
+    .t-when { font-size: .85rem; color: rgba(249, 243, 239, .65); }
+    .t-what h3 { font-size: 1rem; margin-bottom: .25rem; }
+    .t-what p { font-size: .92rem; color: rgba(249, 243, 239, .72); }
+    .t-what .pill {
+        display: inline-block; font-size: .66rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+        border: 1px solid rgba(249, 243, 239, .35); padding: .1rem .45rem; margin-left: .4rem;
+        color: rgba(249, 243, 239, .8); vertical-align: 2px;
+    }
+
+    /* Options */
+    .options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 40px; border: 1px solid var(--rule-on-green); }
+    .option { padding: 2rem 1.6rem; display: flex; flex-direction: column; border-right: 1px solid var(--rule-on-green); position: relative; }
+    .option:last-child { border-right: none; }
+    .option.rec { background: rgba(156, 199, 0, .07); outline: 1.5px solid var(--lime); outline-offset: -1.5px; }
+    .option .file { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--lime); margin-bottom: .9rem; }
+    .option h3 { font-size: 1.35rem; margin-bottom: .45rem; }
+    .option .pitch { font-size: .92rem; color: rgba(249, 243, 239, .72); margin-bottom: 1.3rem; min-height: 3em; }
+    .option ul { list-style: none; flex: 1; margin-bottom: 1.8rem; }
+    .option li {
+        position: relative; padding: .55rem 0 .55rem 1.4rem;
+        border-top: 1px solid var(--rule-on-green);
+        font-size: .9rem; color: rgba(249, 243, 239, .88);
+    }
+    .option li::before {
+        content: ""; position: absolute; left: 0; top: 1.05rem;
+        width: 7px; height: 7px; border-radius: 50%; background: var(--lime);
+    }
+    .option li.carry { color: var(--lime); font-weight: 500; }
+    .price { border-top: 2px solid var(--lime); padding-top: 1rem; }
+    .price b { display: block; font-weight: 700; font-stretch: 125%; font-size: 2.2rem; line-height: 1.1; color: var(--cream); }
+    .price span { font-size: .78rem; color: rgba(249, 243, 239, .6); letter-spacing: .06em; text-transform: uppercase; }
+    .rec-badge {
+        position: absolute; top: -1px; right: -1px;
+        background: var(--lime); color: var(--green-ink);
+        font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+        padding: .35rem .7rem;
+    }
+    .fine { margin-top: 28px; font-size: .86rem; color: rgba(249, 243, 239, .7); max-width: 780px; }
+    .fine p + p { margin-top: .5rem; }
+
+    /* Promise box */
+    .promise {
+        margin-top: 48px;
+        border: 1.5px solid var(--lime);
+        background: rgba(156, 199, 0, .06);
+        padding: 1.8rem;
+        display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center;
+    }
+    .seal {
+        width: 92px; height: 92px; border-radius: 50%;
+        background: var(--lime); color: var(--green-ink);
+        display: grid; place-items: center; text-align: center;
+        font-weight: 800; font-stretch: 125%; font-size: .78rem; line-height: 1.1; letter-spacing: .02em;
+    }
+    .promise h3 { margin-bottom: .35rem; }
+    .promise p { color: var(--ink-soft); font-size: .96rem; }
+
+    /* Terms */
+    details { border-bottom: 1px solid var(--rule); }
+    details:first-of-type { border-top: 1px solid var(--rule); }
+    summary {
+        list-style: none; cursor: pointer;
+        padding: 1.1rem 2rem 1.1rem 0; position: relative;
+        font-weight: 600; color: var(--green);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 0; top: .9rem; font-size: 1.3rem; color: var(--lime-dark); font-weight: 400; }
+    details[open] summary::after { content: "–"; }
+    details p { padding: 0 0 1.2rem; color: var(--ink-soft); font-size: .95rem; max-width: var(--text); }
+    .terms { margin-top: 32px; max-width: 860px; }
+
+    /* CTA */
+    .cta { text-align: left; }
+    .cta .row { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; margin-top: 2rem; }
+    .cta .note { font-size: .86rem; color: rgba(249, 243, 239, .65); }
+
+    footer { padding-block: 40px; font-size: .82rem; color: var(--ink-soft); }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .hero-grid { grid-template-columns: 1fr; }
+        .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3, .crew, .options { grid-template-columns: 1fr; }
+        .option { border-right: none; border-bottom: 1px solid var(--rule-on-green); }
+        .option:last-child { border-bottom: none; }
+        .t-row { grid-template-columns: 80px 1fr; }
+        .t-what { grid-column: 1 / -1; }
+    }
+    @media (max-width: 640px) {
+        section { padding-block: 56px; }
+        .nav-links { display: none; }
+        nav .wrap { grid-template-columns: auto 1fr; }
+        .nav-cta { justify-self: end; }
+        .stats { grid-template-columns: repeat(2, 1fr); }
+        .stats div:nth-child(2) { border-right: none; }
+        .stats div:nth-child(3) { padding-left: 0; border-top: 1px solid var(--rule-on-green); }
+        .stats div:nth-child(4) { border-top: 1px solid var(--rule-on-green); }
+        .grid-2, .grid-4 { grid-template-columns: 1fr; }
+        .notes li { grid-template-columns: 1fr; gap: .3rem; }
+        .promise { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+
+
+<nav aria-label="Proposal sections">
+    <div class="wrap">
+        <ul class="nav-links">
+            <li><a href="#brief">Brief</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#options">Options</a></li>
+        </ul>
+        <a href="#top" aria-label="eComFuel"><svg class="wordmark" role="img" aria-label="eComFuel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 40" fill="none"><path d="M0.544922 28.4444H22.9485V24.907H4.71726V21.7506H21.1526V18.3039H4.71726V15.0748H22.9485V11.5374H0.544922V28.4444ZM28.9894 19.9909C28.9894 18.9388 29.2071 18.068 29.6424 17.3424C30.0778 16.6168 30.7127 16.0544 31.529 15.6735C32.3635 15.2925 33.3612 15.093 34.5585 15.093H43.1027C43.8828 15.093 44.554 15.1293 45.1163 15.22C45.6968 15.3107 46.2048 15.4558 46.6764 15.6553C47.13 15.8549 47.5653 16.127 47.9463 16.4717L50.4497 13.5329C49.851 13.0068 49.198 12.6077 48.4905 12.2993C47.783 11.9909 46.9848 11.7732 46.1322 11.6281C45.2796 11.483 44.2637 11.4104 43.1027 11.4104H34.5585C32.5086 11.4104 30.7309 11.7551 29.2796 12.4444C27.8102 13.1338 26.7037 14.1134 25.9236 15.3832C25.1617 16.6531 24.7807 18.1769 24.7807 19.9546C24.7807 21.7687 25.1617 23.3107 25.9236 24.5986C26.6855 25.8866 27.8102 26.8662 29.2796 27.5374C30.749 28.2086 32.5086 28.5533 34.5585 28.5533H43.1027C44.3 28.5533 45.334 28.4807 46.1866 28.3537C47.0392 28.2268 47.8193 27.9909 48.5268 27.6825C49.2343 27.3742 49.8692 26.9569 50.4678 26.4308L47.9644 23.4921C47.6016 23.8367 47.1662 24.1088 46.6946 24.3084C46.2229 24.5079 45.715 24.6531 45.1526 24.7438C44.5903 24.8163 43.9191 24.8707 43.1027 24.8707H34.5585C33.3612 24.8707 32.3454 24.6712 31.529 24.2903C30.6946 23.9093 30.0778 23.3469 29.6424 22.6213C29.2071 21.8957 28.9894 21.0068 28.9712 19.9909M76.2637 19.9909C76.2637 21.0249 76.0642 21.9138 75.647 22.6213C75.2297 23.3469 74.6129 23.8912 73.7966 24.2903C72.9803 24.6893 71.9644 24.8707 70.7309 24.8707H61.4066C60.1186 24.8707 59.0846 24.6712 58.2501 24.2903C57.4338 23.8912 56.817 23.3469 56.3998 22.6213C55.9826 21.8957 55.783 21.0249 55.783 19.9909C55.783 18.9388 55.9826 18.068 56.3998 17.3424C56.817 16.6168 57.4338 16.0726 58.2501 15.6735C59.0665 15.2744 60.1186 15.093 61.4066 15.093H70.7309C71.9644 15.093 72.9803 15.2925 73.7966 15.6735C74.6129 16.0726 75.2297 16.6168 75.647 17.3424C76.0642 18.068 76.2637 18.9388 76.2637 19.9546V19.9909ZM79.3476 24.6168C80.1095 23.3288 80.4905 21.7868 80.4905 20.0091C80.4905 18.2313 80.1095 16.7075 79.3476 15.4195C78.5857 14.1315 77.4792 13.1519 75.9916 12.4626C74.5222 11.7732 72.7626 11.4286 70.7127 11.4286H61.3885C59.3204 11.4286 57.5427 11.7732 56.0914 12.4626C54.6402 13.1519 53.5154 14.1315 52.7354 15.4195C51.9554 16.7075 51.5744 18.2313 51.5744 19.9909C51.5744 21.805 51.9554 23.3469 52.7354 24.6349C53.5154 25.9229 54.6402 26.9025 56.0914 27.5737C57.5608 28.2449 59.3204 28.5896 61.3703 28.5896H70.6946C72.7263 28.5896 74.486 28.2449 75.9735 27.5737C77.4429 26.9025 78.5676 25.9229 79.3295 24.6349M107.683 28.4444H111.928V11.5374H107.919L97.5245 21.2426L87.13 11.5374H83.1027V28.4444H87.3476V18.068L87.3658 17.0884L96.5086 25.6327H98.4497L107.647 17.0884V28.4444H107.683ZM120.273 40H122.069V0H120.273V40ZM134.586 15.2562H152.817V11.5374H130.413V28.4444H134.586V22.6576H151.021V19.0113H134.586V15.2562ZM180.627 24.907C181.352 23.6916 181.715 22.1497 181.715 20.2812V11.5374H177.416V20.2812C177.416 21.3333 177.216 22.2041 176.799 22.8753C176.382 23.5465 175.819 24.0363 175.076 24.3628C174.35 24.6712 173.443 24.8345 172.391 24.8345H165.116C164.064 24.8345 163.175 24.6712 162.45 24.3628C161.724 24.0363 161.144 23.5465 160.726 22.8753C160.309 22.2041 160.11 21.3515 160.11 20.2812V11.5374H155.792V20.2812C155.792 22.1315 156.155 23.6735 156.881 24.907C157.606 26.1224 158.658 27.0476 160.055 27.6644C161.452 28.2812 163.121 28.5896 165.098 28.5896H172.427C174.404 28.5896 176.073 28.2812 177.47 27.6644C178.867 27.0476 179.919 26.1406 180.645 24.907M184.817 28.4444H207.221V24.907H188.989V21.7506H205.425V18.3039H188.989V15.0748H207.221V11.5374H184.817V28.4444ZM231.456 28.4444V24.5624H214.169V11.5374H209.869V28.4444H231.456Z" fill="#F9F3EF"></path></svg></a>
+        <a class="btn ghost nav-cta" href="#options">See options</a>
+    </div>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="band hero">
+    <div class="wrap">
+        <div class="hero-grid">
+            <div>
+                <p class="eyebrow">ECF Live 2027 · Live coverage proposal</p>
+                <h1>Three days in Playa.<br>All of eCom X <em>watching.</em></h1>
+                <p class="lede">A two-person strike team to film ECF Live, post it to X while it's happening, and get the room sharing it. Then leave you a library of footage that keeps selling the next one.</p>
+                <a class="btn" href="#options">See the three options</a>
+                <p class="hero-note">Prepared for Andrew Youderian by Vagabonding Media × Evan Fawell.</p>
+            </div>
+        </div>
+        <div class="stats">
+            <div><b>Jan 26–28</b><span>Devossion, Playa del Carmen</span></div>
+            <div><b>2</b><span>crew on site from the opening party to the close</span></div>
+            <div><b>3</b><span>sizzle reels, one a day, posted during the event</span></div>
+            <div><b>250K</b><span>impressions, the number we're aiming for</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- BRIEF -->
+<section id="brief">
+    <div class="wrap">
+        <p class="eyebrow">The brief</p>
+        <h2>Your brief, as we understood it.</h2>
+        <p class="lede">You want to build buzz on X while the event is running, and come away with creative you can use in your marketing for years. X is the priority, with LinkedIn a distant second.</p>
+        <div class="grid-4">
+            <div class="feat"><span class="tag">Daily</span><h3>Daily sizzle reels</h3><p>Three in total, one per day, each 30–60 seconds long, released to attendees and online while the event is still on.</p></div>
+            <div class="feat"><span class="tag">Live</span><h3>6–8 posts a day</h3><p>Candid video and photos on the ECF and Andrew accounts, tagging the people on your hit list.</p></div>
+            <div class="feat"><span class="tag">Once</span><h3>One epic prank</h3><p>On a member we haven't picked yet, filmed and posted.</p></div>
+            <div class="feat"><span class="tag">After</span><h3>An event trailer</h3><p>A single cut of the whole event that works as this year's recap and next year's invite.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT WE'D ADD -->
+<section class="alt" id="gaps">
+    <div class="wrap">
+        <p class="eyebrow">You asked what you might be missing</p>
+        <h2>The reach will come from the people in the room.</h2>
+        <p class="lede">A typical original post from @youderian gets around 2–3K views. Reaching 250K across everything we post would take about a hundred of those, so ECF's own channels won't get there alone. The rest has to come from the roughly 300 owners at the event, and especially the handful with real audiences, posting and quote-posting while it's happening. That's where we'd put the extra effort.</p>
+        <div class="grid-4">
+            <div class="feat"><span class="tag">Amplify</span><h3>A plan for the guest list</h3><p>Before we land, we'd go through your list with you, pick the 15–20 attendees who have audiences and agree a moment with each of them.</p></div>
+            <div class="feat"><span class="tag">Proof</span><h3>Member stories</h3><p>4 short to-camera interviews with owners about where they were stuck and what changed. It's the kind of proof your apply page runs on, in video form.</p></div>
+            <div class="feat"><span class="tag">Stills</span><h3>Photography</h3><p>We shoot stills alongside the video and deliver a package of 70 edited photos within a week, for recaps, the site and next year's invite.</p></div>
+            <div class="feat"><span class="tag">Evergreen</span><h3>An evergreen catalogue</h3><p>6 vertical cuts you can post long after the week is over, for the next ECF Live launch, membership and the podcast.</p></div>
+        </div>
+        <ul class="notes">
+            <li><b>The prank</b><span>Happy to do it. We'd plan it with you and film it properly, and the member signs off before anything goes up.</span></li>
+            <li><b>6–8 posts a day</b><span>Two of us can handle that comfortably. We'd post native vertical video with captions from your accounts, using your tagging list.</span></li>
+            <li><b>LinkedIn</b><span>In options 2 and 3 we'd recut the sizzles and trailer for LinkedIn rather than make separate content for it. The live posting goes to X.</span></li>
+            <li><b>One change we'd suggest</b><span>We'd cut the trailer from the best moments of all three days rather than stitch the sizzles together. We think it makes a stronger trailer, and the deadline stays the same.</span></li>
+        </ul>
+    </div>
+</section>
+
+<!-- CREW -->
+<section id="crew">
+    <div class="wrap">
+        <p class="eyebrow">Who's coming</p>
+        <h2>A crew of two, or three if you want the film</h2>
+        <p class="lede">At any point one of us is filming and the other is posting, so the posts go out while the event is still running.</p>
+        <div class="crew">
+            <div class="person">
+                <div class="mono">JR</div>
+                <h3>James Roberts</h3>
+                <p class="role">Co-founder & creative director, Vagabonding Media</p>
+                <p>Documentary filmmaker who has made films for Jon Bellion, Gemini and others. On this job he leads the story, the posting plan and the edit.</p>
+            </div>
+            <div class="person">
+                <div class="mono">EF</div>
+                <h3>Evan Fawell</h3>
+                <p class="role">Filmmaker & photographer</p>
+                <p>Part of the Art of Mondays content team, with brand work for Nikon Australia and Sirui. He leads camera, stills and the daily sizzles.</p>
+            </div>
+            <div class="person optional">
+                <div class="mono">GE</div>
+                <h3>Guy Ettlin</h3>
+                <p class="role">Co-founder, Vagabonding Media · option three</p>
+                <p>Joins as third camera and producer, which frees one of us to post full time. He also adds a cinema camera for the ECF Live film.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WORK -->
+<section class="band" id="work">
+    <div class="wrap">
+        <p class="eyebrow">Work</p>
+        <h2>Some recent work</h2>
+        <p class="lede">First is the Camp Mondays coverage you saw in France. Then Father Figure, a feature-length documentary Vagabonding directed and edited for Jon Bellion, and a brand reel Evan shot for Sirui.</p>
+        <div class="viewer">
+            <div class="tabs" role="tablist">
+                <button class="tab" role="tab" data-index="0">camp-mondays.reel</button>
+                <button class="tab" role="tab" data-index="1">father-figure.doc</button>
+                <button class="tab" role="tab" data-index="2">faroe-islands.reel</button>
+            </div>
+            <!-- TODO: confirm with Evan which Camp Mondays pieces he shot/edited before sending. -->
+            <div class="slide">
+                <div class="player portrait"><video src="media/camp-mondays-day-one.mp4" poster="media/camp-mondays-day-one.jpg" controls playsinline preload="none"></video></div>
+                <div class="slide-info"><div class="text">
+                    <span class="slide-tag">Art of Mondays · France</span>
+                    <h3>Camp Mondays, day one.</h3>
+                    <p>Live coverage of Camp Mondays, when 100 founders took over a village in the French countryside, posted as it happened.</p>
+                </div></div>
+            </div>
+            <div class="slide" data-src="https://www.youtube-nocookie.com/embed/mSUVgkexeas" hidden>
+                <div class="player landscape"><div class="player-loading">Father<br>Figure</div></div>
+                <div class="slide-info"><div class="text">
+                    <span class="slide-tag">Vagabonding Media · Jon Bellion</span>
+                    <h3>Father Figure.</h3>
+                    <p>A feature-length documentary for Jon Bellion, directed and edited by Guy Ettlin and James Roberts. Released October 2026.</p>
+                </div></div>
+            </div>
+            <div class="slide" hidden>
+                <div class="player landscape"><video src="media/faroe-islands.mp4" poster="media/faroe-islands.jpg" controls playsinline preload="none"></video></div>
+                <div class="slide-info"><div class="text">
+                    <span class="slide-tag">Evan Fawell · for Sirui</span>
+                    <h3>Faroe Islands.</h3>
+                    <p>Evan shot this short brand reel for Sirui. It has 34K plays.</p>
+                </div></div>
+            </div>
+            <!-- TODO: add Drum Belly here once James sends the link. -->
+        </div>
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="band deep" id="timeline">
+    <div class="wrap">
+        <p class="eyebrow">Timeline</p>
+        <h2>From booking to the final film</h2>
+        <p class="lede">Live posting starts on the first night, and you get the trailer a week after the closing party.</p>
+        <div class="timeline">
+            <div class="t-row"><div class="t-code">BOOK</div><div class="t-when">By 1 December</div><div class="t-what"><h3>Choose an option</h3><p>The deposit holds the crew for 25–29 January.</p></div></div>
+            <div class="t-row"><div class="t-code">PLAN</div><div class="t-when">Early January</div><div class="t-what"><h3>Planning call and hit list</h3><p>You send us the shots, people and handles you want. We put together the run of show, test posting access on both accounts and draft the prank. <span class="pill">Options 2–3</span> We also build the amplification list with you.</p></div></div>
+            <div class="t-row"><div class="t-code">LAND</div><div class="t-when">Mon 25 Jan</div><div class="t-what"><h3>Crew lands in Playa</h3><p>We recce the resort, check the light and wifi, and test the posting workflow end to end.</p></div></div>
+            <div class="t-row"><div class="t-code">DAY 1</div><div class="t-when">Tue 26 Jan, evening</div><div class="t-what"><h3>Opening party</h3><p>Live posting starts, and Sizzle 01 goes out the next morning.</p></div></div>
+            <div class="t-row"><div class="t-code">DAY 2</div><div class="t-when">Wed 27 Jan</div><div class="t-what"><h3>Full day and group adventures</h3><p>6–8 posts through the day, with the off-site adventures in the afternoon. Sizzle 02 goes out that night.</p></div></div>
+            <div class="t-row"><div class="t-code">DAY 3</div><div class="t-when">Thu 28 Jan</div><div class="t-what"><h3>Full day and closing party</h3><p>Sizzle 03 goes out that night. The prank happens on whichever day we plan it for.</p></div></div>
+            <div class="t-row"><div class="t-code">+7</div><div class="t-when">Thu 4 Feb</div><div class="t-what"><h3>Trailer v1</h3><p>You get the event trailer to review. <span class="pill">Options 2–3</span> The edited photos come too, with the results report on impressions, top posts and who shared.</p></div></div>
+            <div class="t-row"><div class="t-code">+21</div><div class="t-when">Thu 18 Feb</div><div class="t-what"><h3>Library delivered</h3><p><span class="pill">Options 2–3</span> We deliver the member stories and the evergreen catalogue.</p></div></div>
+            <div class="t-row"><div class="t-code">+28</div><div class="t-when">Thu 25 Feb</div><div class="t-what"><h3>ECF Live film v1</h3><p><span class="pill">Option 3</span> First cut of the 5–7 minute film of the three days. After your feedback we deliver the final master.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- OPTIONS -->
+<section class="band" id="options">
+    <div class="wrap">
+        <p class="eyebrow">Options</p>
+        <h2>Three ways to cover the week</h2>
+        <p class="lede">Each one is a fixed price for the scope listed. They differ in how much work we put into reach during the event, and how much footage you have to use afterwards.</p>
+        <div class="options">
+            <div class="option">
+                <p class="file">Option 01 · The live desk</p>
+                <h3>The brief, done properly.</h3>
+                <p class="pitch">Exactly what you asked for, covered by two people who've done this before.</p>
+                <ul>
+                    <li>Crew of two on site from the opening party to the closing party</li>
+                    <li>3 daily sizzle reels, 30–60s</li>
+                    <li>6–8 candid photos and videos a day, shared across @ecomfuelco and @youderian, tagged from your hit list</li>
+                    <li>One prank, planned, filmed and posted</li>
+                    <li>Event trailer within 7 days</li>
+                    <li>One round of feedback on the trailer</li>
+                </ul>
+                <div class="price"><b>$24,000</b><span>Fixed · USD</span></div>
+            </div>
+            <div class="option rec">
+                <span class="rec-badge">Recommended</span>
+                <p class="file">Option 02 · Live + library</p>
+                <h3>Get the room posting</h3>
+                <p class="pitch">The brief, plus the work we think it takes to reach 250K and footage you can keep using after the week.</p>
+                <ul>
+                    <li class="carry">Everything in The live desk</li>
+                    <li>Guest-list amplification plan, built with you before the event</li>
+                    <li>4 member stories, 45–60s each</li>
+                    <li>Event photography: a package of 70 edited stills within a week</li>
+                    <li>Evergreen catalogue: 6 vertical cuts within three weeks</li>
+                    <li>Sizzles and trailer recut for LinkedIn</li>
+                    <li>Results report a week after, covering impressions, top posts and who shared</li>
+                    <li>Two rounds of feedback on the trailer</li>
+                </ul>
+                <div class="price"><b>$38,000</b><span>Fixed · USD</span></div>
+            </div>
+            <div class="option">
+                <p class="file">Option 03 · The full crew</p>
+                <h3>Add a film of the event</h3>
+                <p class="pitch">Everything in option 02, with a third camera on site and a short documentary of ECF Live.</p>
+                <ul>
+                    <li class="carry">Everything in Live + library</li>
+                    <li>Guy Ettlin joins as third camera and producer, so one of us posts full time</li>
+                    <li>ECF Live film: a 5–7 minute documentary of the three days, for the Live page and next year's launch</li>
+                    <li>Raw footage handed over, with a clip catalogue your team can search</li>
+                    <li>Release calendar for the catalogue, planned with your team through week 12</li>
+                    <li>Two rounds of feedback on the film</li>
+                </ul>
+                <div class="price"><b>$64,000</b><span>Fixed · USD</span></div>
+            </div>
+        </div>
+        <div class="fine">
+            <p><strong>Every price includes the crew's travel, accommodation and food.</strong> You won't have any expenses to approve or expense reports to chase.</p>
+            <p>If you want something from one option added to another, just ask. We quote any extra deliverable as a fixed add-on before we start on it.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROMISE + TERMS -->
+<section id="terms">
+    <div class="wrap">
+        <p class="eyebrow">How we work</p>
+        <h2>The terms</h2>
+        <div class="promise">
+            <div class="seal">LIVE<br>SAME<br>DAY</div>
+            <div>
+                <h3>Posts go out on the day.</h3>
+                <p>Each day's posts go out that day and each sizzle by the next morning, so you'll be watching the event on X while you're still at it.</p>
+            </div>
+        </div>
+        <div class="terms">
+            <details><summary>Payment</summary><p>Prices are fixed and in USD. You pay 50% to book, which locks the crew for your dates, and the other 50% when we deliver the trailer. Payment is by bank transfer.</p></details>
+            <details><summary>What's included</summary><p>Everything listed in your option, plus the crew's flights, accommodation, food and local transport. We bring our own gear, and it's covered.</p></details>
+            <details><summary>Usage</summary><p>eComFuel can use every deliverable anywhere and forever, including social, the site, ads and sponsorship decks. We may also show the work in our own portfolios.</p></details>
+            <details><summary>People on camera</summary><p>Any member who appears in a story or the prank signs a simple release, and the target of the prank approves it before it goes up.</p></details>
+            <details><summary>Feedback</summary><p>We ask for one set of written notes per round, from one decision-maker. Each option lists how many rounds it includes.</p></details>
+            <details><summary>If plans change</summary><p>If the event moves, your deposit moves with it. If you cancel within 30 days of the event, you lose the deposit.</p></details>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<footer>
+    <div class="wrap">
+        <span>Vagabonding Media × Evan Fawell · Prepared for eComFuel · October 2026</span>
+        <a href="mailto:james@vagabondingmedia.com">james@vagabondingmedia.com</a>
+    </div>
+</footer>
+
+<script>
+    // Work viewer: each embed loads the first time its tab is opened.
+    const slides = document.querySelectorAll('.slide');
+    const tabs = document.querySelectorAll('.tab');
+
+    function load(slide) {
+        if (!slide.dataset.src || slide.dataset.loaded) return;
+        const f = document.createElement('iframe');
+        f.src = slide.dataset.src;
+        f.title = slide.querySelector('h3').textContent;
+        f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+        f.allowFullscreen = true;
+        f.loading = 'lazy';
+        const player = slide.querySelector('.player');
+        player.querySelector('.player-loading')?.remove();
+        player.appendChild(f);
+        slide.dataset.loaded = '1';
+    }
+
+    function goTo(i) {
+        slides.forEach((s, n) => {
+            s.hidden = n !== i;
+            if (n !== i) s.querySelectorAll('video').forEach(v => v.pause());
+        });
+        tabs.forEach((t, n) => {
+            t.classList.toggle('active', n === i);
+            t.setAttribute('aria-selected', n === i ? 'true' : 'false');
+        });
+        load(slides[i]);
+    }
+
+    tabs.forEach(t => t.addEventListener('click', () => goTo(parseInt(t.dataset.index, 10))));
+    goTo(0);
+</script>
+
+</body>
+</html>
