@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Camp Mondays · Full batch</title>
+<meta name="description" content="Every piece posted from Camp Mondays, the Art of Mondays founder camp in France.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+        color-scheme: dark;
+        --green: #315035;
+        --green-deep: #1b3923;
+        --lime: #9cc700;
+        --lime-hover: #a9d80f;
+        --cream: #f9f3ef;
+        --rule-on-green: rgba(249, 243, 239, .16);
+        --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+        --wide: 1080px;
+    }
+    html { background: var(--green-deep); }
+    body {
+        font-family: var(--font); font-weight: 300; font-size: 17px; line-height: 1.55;
+        background: var(--green-deep); color: var(--cream);
+        overflow-x: hidden; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+    .wrap { max-width: var(--wide); margin: 0 auto; padding-inline: 16px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--green); height: 64px; border-bottom: 1px solid var(--rule-on-green); }
+    nav .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    nav a { font-size: .85rem; text-decoration: none; opacity: .85; }
+    nav a:hover { opacity: 1; color: var(--lime); }
+    nav .label { font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--lime); }
+
+    header { padding-block: 64px 40px; }
+    .eyebrow { font-size: .82rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--lime); margin-bottom: 1rem; }
+    h1, h2 { font-weight: 700; font-stretch: 125%; line-height: 1.08; letter-spacing: -.01em; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 1.1rem; }
+    h2 { font-size: 1.1rem; margin-bottom: 1rem; }
+    .lede { max-width: 640px; font-size: 1.05rem; color: rgba(249, 243, 239, .78); }
+
+    section { padding-bottom: 56px; }
+    .grid { display: grid; gap: 2px; }
+    .grid.vertical { grid-template-columns: repeat(5, 1fr); }
+    .grid.landscape { grid-template-columns: repeat(3, 1fr); }
+    .loop { position: relative; display: block; padding: 0; border: 0; background: #000; cursor: pointer; overflow: hidden; }
+    .vertical .loop { aspect-ratio: 9 / 16; }
+    .landscape .loop { aspect-ratio: 4 / 3; }
+    .loop video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+    .loop:hover video { transform: scale(1.03); }
+    .loop span {
+        position: absolute; left: 0; right: 0; bottom: 0; padding: 2rem .8rem .7rem; text-align: left;
+        font-family: var(--font); font-size: .74rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+        color: var(--cream); background: linear-gradient(transparent, rgba(0, 0, 0, .6));
+    }
+
+    .lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(10, 20, 13, .94); display: grid; place-items: center; padding: 16px; }
+    .lightbox[hidden] { display: none; }
+    .lightbox video { max-width: 100%; max-height: calc(100vh - 32px); background: #000; }
+    .lightbox-close { position: absolute; top: 12px; right: 16px; font-family: var(--font); font-size: 2rem; line-height: 1; color: var(--cream); background: none; border: 0; cursor: pointer; }
+
+    footer { border-top: 1px solid var(--rule-on-green); padding-block: 28px; font-size: .82rem; color: rgba(249, 243, 239, .6); }
+
+    @media (max-width: 860px) {
+        .grid.vertical { grid-template-columns: repeat(3, 1fr); }
+        .grid.landscape { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+        .grid.vertical { grid-template-columns: repeat(2, 1fr); }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="wrap">
+        <a href="index.html#work">← Back to the proposal</a>
+        <span class="label">Camp Mondays</span>
+    </div>
+</nav>
+
+<main>
+<header>
+    <div class="wrap">
+        <p class="eyebrow">Art of Mondays · France · July 2026</p>
+        <h1>Everything that went out from Camp Mondays.</h1>
+        <p class="lede">100 founders, one village in the French countryside, and a crew posting it as it happened. These are the 13 pieces that went out. Tap any of them to watch with sound.</p>
+    </div>
+</header>
+
+<!-- TODO: EF-suffixed files (bus arrival, pool party x2, run club) assumed to be Evan's cuts; SK files are another editor's. Confirm with Evan before sending. -->
+<section>
+    <div class="wrap">
+        <h2>Day reels and moments</h2>
+        <div class="grid vertical">
+            <button class="loop" data-full="media/camp/bus-arrival.mp4"><video src="media/camp/bus-arrival-loop.mp4" poster="media/camp/bus-arrival.jpg" muted loop playsinline preload="metadata"></video><span>Bus arrival</span></button>
+            <button class="loop" data-full="media/camp/day-1.mp4"><video src="media/camp/day-1-loop.mp4" poster="media/camp/day-1.jpg" muted loop playsinline preload="metadata"></video><span>Day one</span></button>
+            <button class="loop" data-full="media/camp/pool-party.mp4"><video src="media/camp/pool-party-loop.mp4" poster="media/camp/pool-party.jpg" muted loop playsinline preload="metadata"></video><span>Pool party</span></button>
+            <button class="loop" data-full="media/camp/basketball.mp4"><video src="media/camp/basketball-loop.mp4" poster="media/camp/basketball.jpg" muted loop playsinline preload="metadata"></video><span>Basketball</span></button>
+            <button class="loop" data-full="media/camp/day-2.mp4"><video src="media/camp/day-2-loop.mp4" poster="media/camp/day-2.jpg" muted loop playsinline preload="metadata"></video><span>Day two</span></button>
+            <button class="loop" data-full="media/camp/run-club.mp4"><video src="media/camp/run-club-loop.mp4" poster="media/camp/run-club.jpg" muted loop playsinline preload="metadata"></video><span>Run club</span></button>
+            <button class="loop" data-full="media/camp/bastille.mp4"><video src="media/camp/bastille-loop.mp4" poster="media/camp/bastille.jpg" muted loop playsinline preload="metadata"></video><span>Bastille Day dinner</span></button>
+            <button class="loop" data-full="media/camp/pool-party-2.mp4"><video src="media/camp/pool-party-2-loop.mp4" poster="media/camp/pool-party-2.jpg" muted loop playsinline preload="metadata"></video><span>Pool party, round two</span></button>
+            <button class="loop" data-full="media/camp/day-3.mp4"><video src="media/camp/day-3-loop.mp4" poster="media/camp/day-3.jpg" muted loop playsinline preload="metadata"></video><span>Day three</span></button>
+            <button class="loop" data-full="media/camp/world-cup.mp4"><video src="media/camp/world-cup-loop.mp4" poster="media/camp/world-cup.jpg" muted loop playsinline preload="metadata"></video><span>World Cup</span></button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <h2>Brand pieces</h2>
+        <div class="grid landscape">
+            <button class="loop" data-full="media/camp/what-is-cm.mp4"><video src="media/camp/what-is-cm-loop.mp4" poster="media/camp/what-is-cm.jpg" muted loop playsinline preload="metadata"></video><span>What is Camp Mondays</span></button>
+            <button class="loop" data-full="media/camp/nostalgia.mp4"><video src="media/camp/nostalgia-loop.mp4" poster="media/camp/nostalgia.jpg" muted loop playsinline preload="metadata"></video><span>What is nostalgia</span></button>
+            <button class="loop" data-full="media/camp/drone.mp4"><video src="media/camp/drone-loop.mp4" poster="media/camp/drone.jpg" muted loop playsinline preload="metadata"></video><span>From above</span></button>
+        </div>
+    </div>
+</section>
+</main>
+
+<div class="lightbox" hidden><button class="lightbox-close" aria-label="Close">×</button><video controls playsinline></video></div>
+
+<footer>
+    <div class="wrap">Vagabonding Media × Evan Fawell · Prepared for eComFuel · October 2026</div>
+</footer>
+
+<script>
+    // Loops play only while on screen.
+    const seen = new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting) e.target.play().catch(() => {}); else e.target.pause();
+    }), { threshold: .25 });
+    document.querySelectorAll('.loop video').forEach(v => seen.observe(v));
+
+    // Loops open the full clip, with sound, in a lightbox.
+    const box = document.querySelector('.lightbox');
+    const boxVideo = box.querySelector('video');
+    function closeBox() { boxVideo.pause(); boxVideo.removeAttribute('src'); boxVideo.load(); box.hidden = true; }
+    document.querySelectorAll('.loop').forEach(b => {
+        b.setAttribute('aria-label', 'Play ' + b.textContent.trim() + ' with sound');
+        b.addEventListener('click', () => { boxVideo.src = b.dataset.full; box.hidden = false; boxVideo.play(); });
+    });
+    box.addEventListener('click', e => { if (e.target !== boxVideo) closeBox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) closeBox(); });
+</script>
+
+</body>
+</html>
